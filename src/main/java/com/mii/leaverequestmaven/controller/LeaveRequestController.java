@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import javax.validation.Valid;
@@ -52,6 +53,7 @@ public class LeaveRequestController {
 
     List<LeaveRequest> leaverequestList = new ArrayList<>();
     List<Object> leaverequestList1 = new ArrayList<>();
+    List<HashMap<String, String>> lrList = new ArrayList<>();
 
     /* to save an employee*/
     @PostMapping("/leaverequests")
@@ -62,7 +64,7 @@ public class LeaveRequestController {
     /*get all employees*/
     @GetMapping("/leaverequests/{id}")
     public ResponseEntity<Object> getAllLeaveRequest(@PathVariable(value = "id") String lrid) {
-        leaverequestList.removeAll(leaverequestList);
+        lrList.removeAll(lrList);
         for (LeaveRequest leaveRequest : lrdao.findAll()) {
             if (leaveRequest.getEmployeeId().getEmployeeId() == Integer.parseInt(lrid)) {
 //                LeaveRequest lr = new LeaveRequest();
@@ -80,10 +82,29 @@ public class LeaveRequestController {
 //                lr.setNoteReject(leaveRequest.getNoteReject());
 //                lr.setEmployeeId(leaveRequest.getEmployeeId());
 //                lr.setTypeLrId(leaveRequest.getTypeLrId());
-                leaverequestList.add(leaveRequest);
+                HashMap<String, String> lr = new HashMap<>();
+                lr.put("lrId", leaveRequest.getLrId() + "");
+                DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+                String reqDate = format.format(leaveRequest.getRequestDate());
+                lr.put("requestDate", reqDate);
+                lr.put("startDate", leaveRequest.getStartDate().toString());
+                lr.put("endDate", leaveRequest.getEndDate().toString());
+                lr.put("lrDuration", leaveRequest.getLrDuration() + "");
+                lr.put("noteRequest", leaveRequest.getNoteRequest());
+                lr.put("requestStatus", leaveRequest.getRequestStatus());
+                String img = "x";
+                if (leaveRequest.getImage() != null) {
+                    byte[] bimg = leaveRequest.getImage();
+                    img = new String(bimg);
+                }
+                lr.put("image", img);
+                lr.put("noteReject", leaveRequest.getNoteReject());
+                lr.put("empName", leaveRequest.getEmployeeId().getEmployeeName());
+                lr.put("typeLr", leaveRequest.getTypeLrId().getTypeName());
+                lrList.add(lr);
             }
         }
-        ServiceResponse<List<LeaveRequest>> response = new ServiceResponse<>("success", leaverequestList);
+        ServiceResponse<List<HashMap<String, String>>> response = new ServiceResponse<>("success", lrList);
         return new ResponseEntity<Object>(response, HttpStatus.OK);
     }
 
