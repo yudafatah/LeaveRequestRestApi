@@ -1,0 +1,130 @@
+2018-12-25 20:55:03,449 INFO  [restartedMain] com.mii.leaverequestmaven.LeaveRequestMavenApplication : Starting LeaveRequestMavenApplication on USTOREs-MacBook-Pro.local with PID 24550 (started by yudafatah in /Users/ustore/Yuda/bc21/Spring Boot/LeaveRequest/LeaveRequestMaven)
+2018-12-25 20:55:03,451 INFO  [restartedMain] com.mii.leaverequestmaven.LeaveRequestMavenApplication : The following profiles are active: production
+2018-12-25 20:55:03,515 INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51639fce: startup date [Tue Dec 25 20:55:03 WIB 2018]; root of context hierarchy
+2018-12-25 20:55:05,680 INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8443 (https)
+2018-12-25 20:55:05,707 INFO  [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2018-12-25 20:55:05,709 INFO  [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-12-25 20:55:05,839 INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2018-12-25 20:55:05,839 INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2328 ms
+2018-12-25 20:55:06,112 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-25 20:55:06,118 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-25 20:55:06,119 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-25 20:55:06,120 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-25 20:55:06,120 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-25 20:55:06,634 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-12-25 20:55:06,651 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-25 20:55:06,731 INFO  [restartedMain] org.hibernate.Version : HHH000412: Hibernate Core {5.0.12.Final}
+2018-12-25 20:55:06,733 INFO  [restartedMain] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found
+2018-12-25 20:55:06,737 INFO  [restartedMain] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist
+2018-12-25 20:55:06,775 INFO  [restartedMain] org.hibernate.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-25 20:55:07,385 INFO  [restartedMain] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-12-25 20:55:08,169 INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate : HHH000228: Running hbm2ddl schema update
+2018-12-25 20:55:08,545 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-25 20:55:09,436 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51639fce: startup date [Tue Dec 25 20:55:03 WIB 2018]; root of context hierarchy
+2018-12-25 20:55:09,572 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/profile/employees],methods=[POST]}" onto public com.mii.leaverequestmaven.model.Employee com.mii.leaverequestmaven.controller.EmployeeController.createEmployee(com.mii.leaverequestmaven.model.Employee)
+2018-12-25 20:55:09,573 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/profile/employees],methods=[GET]}" onto public java.util.List<com.mii.leaverequestmaven.model.Employee> com.mii.leaverequestmaven.controller.EmployeeController.getAllEmployees()
+2018-12-25 20:55:09,574 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/profile/employees/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.mii.leaverequestmaven.model.Employee> com.mii.leaverequestmaven.controller.EmployeeController.getEmployeeById(java.lang.Integer)
+2018-12-25 20:55:09,574 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/profile/employees/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.mii.leaverequestmaven.model.Employee> com.mii.leaverequestmaven.controller.EmployeeController.updateEmployee(java.lang.Integer,com.mii.leaverequestmaven.model.Employee)
+2018-12-25 20:55:09,575 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/profile/employees/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.mii.leaverequestmaven.model.Employee> com.mii.leaverequestmaven.controller.EmployeeController.deleteEmployee(java.lang.Integer)
+2018-12-25 20:55:09,578 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/leaverequests],methods=[POST]}" onto public com.mii.leaverequestmaven.model.LeaveRequest com.mii.leaverequestmaven.controller.LeaveRequestController.createLeaveRequest(com.mii.leaverequestmaven.model.LeaveRequest)
+2018-12-25 20:55:09,579 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/leaverequests],methods=[GET]}" onto public java.util.List<com.mii.leaverequestmaven.model.LeaveRequest> com.mii.leaverequestmaven.controller.LeaveRequestController.getAllLeaveRequest()
+2018-12-25 20:55:09,580 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/leaverequests/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.mii.leaverequestmaven.model.LeaveRequest> com.mii.leaverequestmaven.controller.LeaveRequestController.getLeaveRequestById(java.lang.Integer)
+2018-12-25 20:55:09,581 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/leaverequests/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.mii.leaverequestmaven.model.LeaveRequest> com.mii.leaverequestmaven.controller.LeaveRequestController.updateLeaveRequest(java.lang.Integer,com.mii.leaverequestmaven.model.LeaveRequest)
+2018-12-25 20:55:09,582 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/leaverequests/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.mii.leaverequestmaven.model.LeaveRequest> com.mii.leaverequestmaven.controller.LeaveRequestController.deleteLeaveRequest(java.lang.Integer)
+2018-12-25 20:55:09,584 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-25 20:55:09,585 INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-25 20:55:09,621 INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-25 20:55:09,622 INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-25 20:55:09,711 INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-25 20:55:09,750 INFO  [restartedMain] org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2018-12-25 20:55:10,121 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2018-12-25 20:55:10,196 INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter : Registering beans for JMX exposure on startup
+2018-12-25 20:55:10,268 ERROR [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:978)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:628)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mii.leaverequestmaven.LeaveRequestMavenApplication.main(LeaveRequestMavenApplication.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2018-12-25 20:55:10,270 ERROR [restartedMain] org.apache.catalina.core.StandardService : Failed to start connector [Connector[HTTP/1.1-8443]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mii.leaverequestmaven.LeaveRequestMavenApplication.main(LeaveRequestMavenApplication.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 18 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:978)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:628)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	... 19 common frames omitted
+2018-12-25 20:55:10,281 INFO  [restartedMain] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2018-12-25 20:55:10,306 INFO  [restartedMain] org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-12-25 20:55:10,310 ERROR [restartedMain] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2018-12-25 20:55:10,312 INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51639fce: startup date [Tue Dec 25 20:55:03 WIB 2018]; root of context hierarchy
+2018-12-25 20:55:10,316 INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown
+2018-12-25 20:55:10,319 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
